@@ -1,4 +1,4 @@
-import org.joda.time.DateTime;
+
 
 import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
@@ -6,6 +6,7 @@ import java.lang.reflect.Method;
 import java.util.*;
 
 public class DynamicObjectCreator {
+
 
     public static Object createAndPopulateObject(Class<?> clazz, Map<String, Object> fieldValues) throws Exception {
         Object instance = clazz.newInstance(); // 创建对象实例
@@ -30,12 +31,12 @@ public class DynamicObjectCreator {
     }
 
     public static void main(String[] args) throws Exception {
-        //退押金生成pxt订单编号
-        DateTime dt = new DateTime();
-        String timeStamp = String.valueOf(System.currentTimeMillis());
-        String uuid = UUID.randomUUID().toString().replace("-", "");
-        String number = dt.toString("yyyyMMddHHmmss") + timeStamp.substring(timeStamp.length() - 4, timeStamp.length()) + uuid.substring(0, 11);
-        System.out.println("pxt" + number);
+//        //退押金生成pxt订单编号
+//        DateTime dt = new DateTime();
+//        String timeStamp = String.valueOf(System.currentTimeMillis());
+//        String uuid = UUID.randomUUID().toString().replace("-", "");
+//        String number = dt.toString("yyyyMMddHHmmss") + timeStamp.substring(timeStamp.length() - 4, timeStamp.length()) + uuid.substring(0, 11);
+//        System.out.println("pxt" + number);
     }
 
 //    public static void main(String[] args) throws Exception {
